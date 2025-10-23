@@ -29,6 +29,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          src="https://kit.fontawesome.com/f7ac33a8d0.js"
+          crossOrigin="anonymous"
+        ></script>
         <Meta />
         <Links />
       </head>

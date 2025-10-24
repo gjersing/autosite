@@ -1,17 +1,17 @@
 import React from "react";
 import { Navbar } from "../components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
+import "../app.css";
+import { Hero } from "../components/Hero";
 
 export function Welcome() {
   return (
     <main>
-      <section id="home">
+      <section id="">
         <Navbar />
-        <Routes>
-          <Route path="/*" />
-        </Routes>
+        <Hero />
       </section>
-      <section id="services" className="mt-400"></section>
+      <section id="services"></section>
     </main>
   );
 }

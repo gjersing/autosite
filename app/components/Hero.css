@@ -106,13 +106,13 @@ video {
 @media screen and (max-width: 960px) {
   .hero-container {
     gap: 15px;
+    margin-top: -80px;
   }
   .hero-header-container {
     text-align: center;
   }
   .hero-header-container > h1 {
     font-size: 50px;
-    margin-top: -80px;
   }
 
   .hero-text {

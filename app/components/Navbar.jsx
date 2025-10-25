@@ -53,7 +53,7 @@ export function Navbar() {
           </li>
           <li className="nav-item nav-contact">
             <Link
-              to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=undefined%20OR@42.33829,-122.89063"
+              to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-links"

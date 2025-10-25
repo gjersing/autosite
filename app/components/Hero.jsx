@@ -14,7 +14,7 @@ export function Hero() {
 
   return (
     <div className="hero-container">
-      <video src="/videos/hero.mp4" autoPlay loop muted />
+      <video src="/videos/hero.mp4" autoPlay loop muted playsInline />
       <div className="hero-header-container">
         <h1 className="hero-header">Sky Auto Body & Collision Repair</h1>
       </div>
@@ -51,7 +51,7 @@ export function Hero() {
             </Button>
           </Link>
           <Link
-            to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=undefined%20OR@42.33829,-122.89063"
+            to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063"
             target="_blank"
             rel="noopener noreferrer"
           >

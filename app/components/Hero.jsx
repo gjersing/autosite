@@ -14,6 +14,7 @@ export function Hero() {
 
   return (
     <div className="hero-container">
+      <img src="/images/heroFrame.png" />
       <video src="/videos/hero.mp4" autoPlay loop muted playsInline />
       <div className="hero-header-container">
         <h1 className="hero-header">Sky Auto Body & Collision Repair</h1>

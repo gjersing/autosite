@@ -30,6 +30,9 @@ export function Navbar() {
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           SKY AUTO BODY
         </Link>
+        {/* <div className="direction-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div> */}
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
@@ -50,7 +53,7 @@ export function Navbar() {
           </li>
           <li className="nav-item nav-contact">
             <Link
-              to="https://www.google.com/maps?ll=42.3555057,-122.8703965&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=undefined%20OR@42.3555057,-122.8703965"
+              to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=undefined%20OR@42.33829,-122.89063"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-links"
@@ -66,14 +69,14 @@ export function Navbar() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                <i className="fa-solid fa-phone"></i> (541) 000-0000
+                <i className="fa-solid fa-phone"></i> (541) 841-4806
               </Link>
             </li>
           )}
         </ul>
         {button && (
           <Button className="large-contact">
-            <i className="fa-solid fa-phone"></i> (541) 000-0000
+            <i className="fa-solid fa-phone"></i> (541) 841-4806
           </Button>
         )}
       </div>

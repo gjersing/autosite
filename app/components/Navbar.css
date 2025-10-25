@@ -88,18 +88,16 @@
     .large-contact {
       display: none;
     }
-    /* .nav-contact {
+    .direction-button,
+    .call-button {
       display: inline;
-    } */
+    }
   }
 
   @media screen and (min-width: 960px) {
     .large-contact {
       display: inline;
     }
-    /* .nav-contact {
-      display: none;
-    } */
   }
 
   .nav-menu {
@@ -148,7 +146,17 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-120%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .direction-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-300%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
   }

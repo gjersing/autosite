@@ -4,6 +4,7 @@ video {
   height: 100%;
   position: fixed;
   z-index: -1;
+  /* filter: blur(2px); */
 }
 
 .hero-container {
@@ -43,9 +44,14 @@ video {
 
 .hero-info {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 12px;
   padding-left: 200px;
+}
+
+.hero-text {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .status-open {
@@ -79,14 +85,63 @@ video {
   margin-left: 4px;
 }
 
-@media screen and (max-width: 960px) {
-  .hero-container > h1 {
-    font-size: 70px;
-    margin-top: -150px;
+@media screen and (max-width: 400px) {
+  .hero-header-container > h1 {
+    font-size: 30px !important;
+  }
+
+  .hero-header-container {
+    margin-top: -40px;
+  }
+
+  .hero-container {
+    gap: 8px !important;
+  }
+
+  .hero-info {
+    font-size: 20px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
+  .hero-container {
+    gap: 15px;
+  }
+  .hero-header-container {
+    text-align: center;
+  }
+  .hero-header-container > h1 {
+    font-size: 50px;
+    /* margin-top: 80px; */
+  }
+
+  .hero-text {
+    flex-direction: column;
+    align-items: left;
+    text-align: center;
+  }
+
+  .hero-hours {
+    padding-top: 12px;
+    margin-left: 0;
+  }
+
+  .hero-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    padding-left: 12px;
+    gap: 20px;
+  }
+
+  .hero-btns {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 401px) {
   .hero-container > h1 {
     font-size: 50px;
     margin-top: -100px;
@@ -104,5 +159,31 @@ video {
 
   .btn {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1380px) and (min-width: 961px) {
+  .hero-text {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 12px;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-info {
+    padding-left: 80px;
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    padding-right: 12px;
+  }
+
+  .hero-container {
+    justify-content: flex-start;
+  }
+
+  .hero-header-container {
+    margin-top: 10vh;
   }
 }

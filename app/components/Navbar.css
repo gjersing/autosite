@@ -29,6 +29,24 @@
   align-items: center;
 }
 
+.navbar-logo-short {
+  display: none;
+}
+
+.navbar-logo-full {
+  display: inline;
+}
+
+@media screen and (max-width: 1080px) {
+  .navbar-logo-short {
+    display: inline;
+  }
+
+  .navbar-logo-full {
+    display: none;
+  }
+}
+
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;

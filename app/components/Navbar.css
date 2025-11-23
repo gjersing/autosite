@@ -257,6 +257,23 @@
   }
 }
 
+@media screen and (max-width: 470px) {
+  .navbar-container {
+    padding: 0 12px;
+  }
+
+  .mobile-action-buttons {
+    gap: 8px;
+    margin-right: 4px;
+  }
+
+  .mobile-icon-button {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .navbar-container {
     padding: 0 10px;

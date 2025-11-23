@@ -1,0 +1,147 @@
+.services-container {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.services-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 80px 120px 80px 100px;
+  gap: 60px;
+}
+
+.services-left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-header {
+  font-size: 48px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.about-us-text {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.about-us-text p {
+  margin-bottom: 24px;
+}
+
+.about-us-text p:last-child {
+  margin-bottom: 0;
+}
+
+.services-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.service-card {
+  background-color: #4a4a4a;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.service-card h2 {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .services-container {
+    align-items: center;
+  }
+
+  .services-content {
+    flex-direction: column;
+    padding: 40px 12px;
+    gap: 40px;
+  }
+
+  .services-left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .services-header {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .about-us-text {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .services-cards {
+    width: 100%;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+
+  .service-card h2 {
+    font-size: 22px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .services-header {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .service-card h2 {
+    font-size: 20px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+}
+

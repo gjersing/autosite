@@ -39,17 +39,21 @@ export function Navbar() {
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="#" className="nav-links" onClick={closeMobileMenu}>
-              Home
+            <Link
+              to="#business-info"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Hours
             </Link>
           </li>
           <li className="nav-item">
             <Link
-              to="#services"
+              to="#about-us"
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Services
+              About Us
             </Link>
           </li>
           <li className="nav-item nav-contact">

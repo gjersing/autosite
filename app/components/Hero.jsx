@@ -5,13 +5,6 @@ import { Button } from "./Button";
 import { Link } from "react-router";
 
 export function Hero() {
-  const date = new Date();
-  const hours = date.getHours();
-  const day = date.getDay();
-  const openDays = [0, 1, 2, 3, 4];
-  const isOpen = openDays.includes(day) && hours >= 8 && hours <= 17;
-  const businessStatus = isOpen ? "Open" : "Currently Closed";
-
   return (
     <div className="hero-container">
       <img src="/images/heroFrame.png" />
@@ -20,27 +13,12 @@ export function Hero() {
         <h1 className="hero-header">Sky Auto Body & Collision Repair</h1>
       </div>
       <div className="hero-info">
-        <div className="hero-text">
-          <div className="hero-address">
-            <ul>
-              <li>1385 Sage Rd</li>
-              <li>Medford, OR 97501</li>
-              <li>(541) 841-4806</li>
-            </ul>
-          </div>
-          <div className="hero-hours">
-            <ol>
-              <li>
-                <h2 className={isOpen ? "status-open" : "status-closed"}>
-                  {businessStatus}
-                </h2>
-              </li>
-              <li>Mon-Fri: 800am-5:00pm</li>
-              <li>Sat: Closed</li>
-              <li>Sun: Closed</li>
-            </ol>
-          </div>
-        </div>
+        <ul className="hero-features">
+          <li>Locally Owned & Operated</li>
+          <li>Free Estimates Without Appointment</li>
+          <li>Insurance Direct Billing</li>
+          <li>Certified Technicians & Quality Repairs</li>
+        </ul>
         <div className="hero-btns">
           <Link to="tel:5418414806">
             <Button

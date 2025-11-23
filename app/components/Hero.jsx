@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../app.css";
 import "./Hero.css";
 import { Button } from "./Button";
 import { Link } from "react-router";
 
 export function Hero() {
+  const [hideVideo, setHideVideo] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const checkReducedMotion = () => {
+      setHideVideo(mediaQuery.matches);
+    };
+
+    checkReducedMotion();
+    mediaQuery.addEventListener("change", checkReducedMotion);
+
+    return () => {
+      mediaQuery.removeEventListener("change", checkReducedMotion);
+    };
+  }, []);
+
   return (
     <div className="hero-container">
       <img src="/images/heroFrame.png" />
-      <video src="/videos/hero.mp4" autoPlay loop muted playsInline />
+      {!hideVideo && (
+        <video src="/videos/hero.mp4" autoPlay loop muted playsInline />
+      )}
       <div className="hero-header-container">
         <h1 className="hero-header">Sky Auto Body & Collision Repair</h1>
       </div>

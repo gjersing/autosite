@@ -21,26 +21,37 @@ export function Hero() {
     // Check if video is paused due to iOS low power mode
     if (videoRef.current) {
       const video = videoRef.current;
+      let hasPlayed = false;
+
+      const handlePlay = () => {
+        hasPlayed = true;
+      };
 
       const checkVideoPlayback = () => {
-        // If video is loaded but still paused after a delay, likely iOS low power mode
-        if (video.readyState >= 2 && video.paused) {
+        // Only check if video is fully loaded (readyState >= 3) and hasn't played
+        // Wait longer to avoid false positives on slow connections
+        if (video.readyState >= 3 && video.paused && !hasPlayed) {
           setTimeout(() => {
-            if (video.paused && !mediaQuery.matches) {
-              // Video should be playing but is paused - likely iOS low power mode
+            // If video is fully ready but still paused and never played, likely iOS low power mode
+            if (
+              video.readyState >= 3 &&
+              video.paused &&
+              !hasPlayed &&
+              !mediaQuery.matches
+            ) {
               setHideVideo(true);
             }
-          }, 500);
+          }, 3000);
         }
       };
 
-      video.addEventListener("loadeddata", checkVideoPlayback);
-      video.addEventListener("canplay", checkVideoPlayback);
+      video.addEventListener("play", handlePlay);
+      video.addEventListener("canplaythrough", checkVideoPlayback);
 
       return () => {
         mediaQuery.removeEventListener("change", checkReducedMotion);
-        video.removeEventListener("loadeddata", checkVideoPlayback);
-        video.removeEventListener("canplay", checkVideoPlayback);
+        video.removeEventListener("play", handlePlay);
+        video.removeEventListener("canplaythrough", checkVideoPlayback);
       };
     }
 

@@ -10,16 +10,16 @@ export function AboutUs() {
           <h1 className="services-header">About Us</h1>
           <div className="about-us-text">
             <p>
-              Sky Auto Body & Collision Repair has been serving the Medford
-              community for years, providing exceptional auto body repair
-              services with a commitment to quality and customer satisfaction.
+              Sky Auto Body & Collision Repair provides honest and exceptional
+              auto body repair services with a commitment to quality and
+              customer satisfaction.
             </p>
             <p>
               As a locally owned and operated business, we understand the
               importance of getting you back on the road safely and quickly. Our
-              I-CAR Certified technicians bring years of experience and expertise
-              to every repair, ensuring your vehicle is restored to its
-              pre-accident condition.
+              I-CAR Certified technicians bring years of experience and
+              expertise to every repair, ensuring your vehicle is restored to
+              its pre-accident condition.
             </p>
             <p>
               We work with all insurance companies and offer free estimates
@@ -48,9 +48,9 @@ export function AboutUs() {
           <div className="service-card">
             <h2>Refinishing</h2>
             <p>
-              Professional paint matching and refinishing services. Our certified
-              technicians ensure a flawless finish that matches your vehicle's
-              original color.
+              Professional paint matching and refinishing services. Our
+              certified technicians ensure a flawless finish that matches your
+              vehicle's original color.
             </p>
           </div>
         </div>
@@ -58,4 +58,3 @@ export function AboutUs() {
     </div>
   );
 }
-

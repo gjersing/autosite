@@ -28,6 +28,7 @@ export function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+          <span className="navbar-logo-tiny">SKY</span>
           <span className="navbar-logo-short">SKY AUTO</span>
           <span className="navbar-logo-full">SKY AUTO BODY</span>
         </Link>
@@ -36,6 +37,19 @@ export function Navbar() {
         </div> */}
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <div className="mobile-action-buttons">
+          <Link
+            to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mobile-icon-button"
+          >
+            <i className="fa-solid fa-location-dot"></i>
+          </Link>
+          <Link to="tel:5418414806" className="mobile-icon-button">
+            <i className="fa-solid fa-phone"></i>
+          </Link>
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">

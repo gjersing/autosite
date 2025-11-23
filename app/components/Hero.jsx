@@ -41,7 +41,7 @@ export function Hero() {
             ) {
               setHideVideo(true);
             }
-          }, 3000);
+          }, 2000);
         }
       };
 

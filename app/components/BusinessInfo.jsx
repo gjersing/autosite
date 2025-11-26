@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import "../app.css";
 import "./BusinessInfo.css";
 
@@ -9,6 +10,8 @@ export function BusinessInfo() {
   const openDays = [1, 2, 3, 4, 5]; // Monday-Friday
   const isOpen = openDays.includes(day) && hours >= 8 && hours <= 17;
   const businessStatus = isOpen ? "Open" : "Currently Closed";
+  const googleMapsLink =
+    "https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063";
 
   return (
     <div className="business-info-container">
@@ -18,9 +21,31 @@ export function BusinessInfo() {
           <div className="business-info-text">
             <div className="business-address">
               <ul>
-                <li>1385 Sage Rd</li>
-                <li>Medford, OR 97501</li>
-                <li>(541) 841-4806</li>
+                <li>
+                  <Link
+                    to={googleMapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="business-link"
+                  >
+                    1385 Sage Rd
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={googleMapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="business-link"
+                  >
+                    Medford, OR 97501
+                  </Link>
+                </li>
+                <li>
+                  <Link to="tel:5418414806" className="business-link">
+                    (541) 841-4806
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="business-hours">

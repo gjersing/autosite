@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../app.css";
 import "./AboutUs.css";
 
 export function AboutUs() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
   const images = [
     "/images/cars.jpg",
@@ -13,21 +14,47 @@ export function AboutUs() {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    const startInterval = () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+      intervalRef.current = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 8000);
+    };
 
-    return () => clearInterval(interval);
+    startInterval();
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [images.length]);
+
+  const resetInterval = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 8000);
+  };
 
   const goToPrevious = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
+    resetInterval();
   };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    resetInterval();
+  };
+
+  const goToIndex = (index) => {
+    setCurrentIndex(index);
+    resetInterval();
   };
 
   return (
@@ -59,7 +86,7 @@ export function AboutUs() {
                 <button
                   key={index}
                   className={`carousel-indicator ${index === currentIndex ? "active" : ""}`}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => goToIndex(index)}
                 />
               ))}
             </div>
@@ -91,6 +118,11 @@ export function AboutUs() {
       </div>
       <div className="services-cards-row">
         <div className="service-card">
+          <img
+            src="/images/estimating-process.webp"
+            alt="Estimates and Insurance Billing"
+            className="service-card-image"
+          />
           <h2>Estimates and Insurance Billing</h2>
           <p>
             Get free estimates without an appointment. We work directly with
@@ -98,6 +130,11 @@ export function AboutUs() {
           </p>
         </div>
         <div className="service-card">
+          <img
+            src="/images/repair-process.jpg"
+            alt="Collision Repair"
+            className="service-card-image"
+          />
           <h2>Collision Repair</h2>
           <p>
             We work on all makes and models. Expert collision repair services by
@@ -106,6 +143,11 @@ export function AboutUs() {
           </p>
         </div>
         <div className="service-card">
+          <img
+            src="/images/refinish-technique.avif"
+            alt="Refinishing"
+            className="service-card-image"
+          />
           <h2>Refinishing</h2>
           <p>
             Professional paint matching and refinishing services. Our certified

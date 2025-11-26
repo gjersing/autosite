@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: #3a3a3a;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   color: #fff;
 }
 
@@ -18,7 +18,91 @@
   gap: 60px;
 }
 
-.services-left {
+.carousel-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 600px;
+  height: 540px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-button:hover {
+  opacity: 0.7;
+}
+
+.carousel-button-prev {
+  left: 15px;
+}
+
+.carousel-button-next {
+  right: 15px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0;
+}
+
+.carousel-indicator.active {
+  background-color: #fff;
+}
+
+.services-right {
   flex: 1.2;
   display: flex;
   flex-direction: column;
@@ -30,6 +114,7 @@
   color: #fff;
   margin-bottom: 60px;
   text-align: left;
+  margin-top: 0;
 }
 
 .about-us-text {
@@ -47,22 +132,26 @@
   margin-bottom: 0;
 }
 
-.services-cards {
-  flex: 1;
+.services-cards-row {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+  gap: 30px;
   width: 100%;
+  padding: 0 120px 80px 100px;
+  justify-content: space-between;
 }
 
 .service-card {
+  flex: 1;
   background-color: #4a4a4a;
   border-radius: 8px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .service-card:hover {
@@ -86,7 +175,7 @@
   margin: 0;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1250px) {
   .services-container {
     align-items: center;
   }
@@ -97,9 +186,29 @@
     gap: 40px;
   }
 
-  .services-left {
+  .services-right {
+    display: contents;
+  }
+
+  .services-header {
+    order: 1;
     width: 100%;
-    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-container {
+    order: 2;
+    width: 100%;
+  }
+
+  .carousel-wrapper {
+    width: 600px;
+    height: 540px;
+  }
+
+  .about-us-text {
+    order: 3;
+    width: 100%;
   }
 
   .services-header {
@@ -113,7 +222,13 @@
     font-size: 18px;
   }
 
-  .services-cards {
+  .services-cards-row {
+    flex-direction: column;
+    padding: 0 12px 40px 12px;
+    gap: 20px;
+  }
+
+  .service-card {
     width: 100%;
   }
 
@@ -144,4 +259,3 @@
     font-size: 14px;
   }
 }
-

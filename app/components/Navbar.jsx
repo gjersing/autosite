@@ -28,9 +28,11 @@ export function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <span className="navbar-logo-tiny">SKY</span>
-          <span className="navbar-logo-short">SKY AUTO</span>
-          <span className="navbar-logo-full">SKY AUTO BODY</span>
+          <img
+            src="/images/sky-logo-cropped.webp"
+            alt="Sky Auto Body"
+            className="navbar-logo-image"
+          />
         </Link>
         {/* <div className="direction-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />

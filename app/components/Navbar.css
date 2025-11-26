@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background: #242021;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -24,31 +24,15 @@
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
   display: flex;
   align-items: center;
+  height: 80px;
 }
 
-.navbar-logo-tiny {
-  display: none;
-}
-
-.navbar-logo-short {
-  display: none;
-}
-
-.navbar-logo-full {
-  display: inline;
-}
-
-@media screen and (max-width: 1080px) {
-  .navbar-logo-short {
-    display: inline;
-  }
-
-  .navbar-logo-full {
-    display: none;
-  }
+.navbar-logo-image {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 .fa-typo3 {
@@ -150,7 +134,7 @@
 
   .nav-menu.active {
     display: flex;
-    background: #242222;
+    background: #242021;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
@@ -185,6 +169,11 @@
     margin: 0;
     z-index: 1;
     order: 2;
+    height: 80px;
+  }
+
+  .navbar-logo-image {
+    height: 55px;
   }
 
   .menu-icon {
@@ -279,12 +268,8 @@
     padding: 0 10px;
   }
 
-  .navbar-logo-tiny {
-    display: inline;
-  }
-
-  .navbar-logo-short {
-    display: none;
+  .navbar-logo-image {
+    height: 50px;
   }
 
   .mobile-action-buttons {

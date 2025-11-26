@@ -93,7 +93,7 @@ export function AboutUs() {
           </div>
         </div>
         <div className="services-right">
-          <h1 className="services-header">About Us</h1>
+          <h1 className="services-header">ABOUT US</h1>
           <div className="about-us-text">
             <p>
               Sky Auto Body & Collision Repair provides honest and exceptional
@@ -123,7 +123,7 @@ export function AboutUs() {
             alt="Estimates and Insurance Billing"
             className="service-card-image"
           />
-          <h2>Estimates and Insurance Billing</h2>
+          <h2>ESTIMATES AND INSURANCE</h2>
           <p>
             Get free estimates without an appointment. We work directly with
             your insurance company to handle all billing and paperwork.
@@ -135,7 +135,7 @@ export function AboutUs() {
             alt="Collision Repair"
             className="service-card-image"
           />
-          <h2>Collision Repair</h2>
+          <h2>COLLISION REPAIR</h2>
           <p>
             We work on all makes and models. Expert collision repair services by
             I-CAR Certified technicians. We restore your vehicle to its
@@ -148,7 +148,7 @@ export function AboutUs() {
             alt="Refinishing"
             className="service-card-image"
           />
-          <h2>Refinishing</h2>
+          <h2>REFINISHING</h2>
           <p>
             Professional paint matching and refinishing services. Our certified
             technicians ensure a flawless finish that matches your vehicle's

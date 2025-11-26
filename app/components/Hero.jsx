@@ -74,7 +74,7 @@ export function Hero() {
         />
       )}
       <div className="hero-header-container">
-        <h1 className="hero-header">Sky Auto Body & Collision Repair</h1>
+        <h1 className="hero-header">SKY AUTO BODY & COLLISION REPAIR</h1>
       </div>
       <div className="hero-info">
         <ul className="hero-features">

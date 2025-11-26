@@ -41,6 +41,7 @@
   margin-top: -56px;
   padding: 18px;
   margin: auto;
+  font-weight: 200;
 }
 
 .hero-container > p,
@@ -103,6 +104,10 @@
 
 .hero-btns .btn {
   margin: 12px 6px;
+}
+
+.hero-btns .btn i {
+  margin-right: 4px;
 }
 
 .fa-play-circle {

@@ -17,7 +17,7 @@ export function BusinessInfo() {
     <div className="business-info-container">
       <div className="business-info-content">
         <div className="business-info-left">
-          <h1 className="business-info-header">Hours and Location</h1>
+          <h1 className="business-info-header">HOURS & LOCATION</h1>
           <div className="business-info-text">
             <div className="business-address">
               <ul>

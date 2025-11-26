@@ -209,6 +209,11 @@
     opacity: 0.7;
   }
 
+  .nav-links i,
+  .large-contact i {
+    margin-right: 4px;
+  }
+
   .direction-icon {
     display: block;
     position: absolute;
@@ -284,5 +289,11 @@
 
   .menu-icon {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mobile-action-buttons {
+    display: none;
   }
 }

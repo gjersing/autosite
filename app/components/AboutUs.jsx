@@ -14,6 +14,8 @@ export function AboutUs() {
               src="/images/cars.jpg"
               alt="Sky Auto Body"
               className="about-us-image"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -45,6 +47,8 @@ export function AboutUs() {
             src="/images/estimating-process.webp"
             alt="Estimates and Insurance Billing"
             className="service-card-image"
+            loading="lazy"
+            decoding="async"
           />
           <h2>ESTIMATES AND INSURANCE</h2>
           <p>
@@ -57,6 +61,8 @@ export function AboutUs() {
             src="/images/repair-process.jpg"
             alt="Collision Repair"
             className="service-card-image"
+            loading="lazy"
+            decoding="async"
           />
           <h2>COLLISION REPAIR</h2>
           <p>
@@ -70,6 +76,8 @@ export function AboutUs() {
             src="/images/refinish-technique.avif"
             alt="Refinishing"
             className="service-card-image"
+            loading="lazy"
+            decoding="async"
           />
           <h2>REFINISHING</h2>
           <p>

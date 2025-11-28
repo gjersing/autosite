@@ -34,6 +34,8 @@ export function Footer() {
               src="/images/sky-logo-cropped.webp"
               alt="Sky Auto Body"
               className="footer-logo-image"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="footer-section footer-hours">

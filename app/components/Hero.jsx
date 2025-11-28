@@ -62,7 +62,11 @@ export function Hero() {
 
   return (
     <div className="hero-container">
-      <img src="/images/heroFrame.png" />
+      <img
+        src="/images/heroFrame.png"
+        alt="Sky Auto Body & Collision Repair"
+        fetchPriority="high"
+      />
       {!hideVideo && (
         <video
           ref={videoRef}

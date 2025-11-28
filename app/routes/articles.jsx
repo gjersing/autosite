@@ -21,6 +21,14 @@ const articles = [
     route: "/faq",
   },
   {
+    title: "How to Choose the Right Auto Body Shop in Medford, Oregon",
+    route: "/choosing-body-shop",
+  },
+  {
+    title: "Understanding Auto Body Repair Costs: A Complete Guide",
+    route: "/repair-costs",
+  },
+  {
     title: "Estimates and Insurance Billing",
     route: "/estimates",
   },

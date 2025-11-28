@@ -57,6 +57,11 @@
   margin-bottom: 0;
 }
 
+.article-body strong {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
 .article-image-container {
   float: right;
   margin: 0 0 30px 40px;

@@ -1,0 +1,80 @@
+# robots.txt for Sky Auto Body & Collision Repair
+# https://skyautobody.co/robots.txt
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin, private, or development files (if any exist)
+# Uncomment and modify as needed:
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /*.json$
+# Disallow: /api/
+
+# Allow crawling of important assets
+Allow: /images/
+Allow: /videos/
+Allow: /favicon.ico
+
+# Crawl-delay (optional - helps prevent server overload)
+# Most modern crawlers respect this, but it's optional
+# Crawl-delay: 1
+
+# Sitemap location
+# Update this URL when your sitemap is generated and deployed
+Sitemap: https://skyautobody.co/sitemap.xml
+
+# Specific rules for major search engines (optional but recommended)
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /videos/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yandex (Russian search engine)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Baidu (Chinese search engine)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+
+# Facebook External Hit (for link previews)
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter Bot (for link previews)
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn Bot (for link previews)
+User-agent: LinkedInBot
+Allow: /
+
+# Block bad bots (optional - helps reduce server load)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+

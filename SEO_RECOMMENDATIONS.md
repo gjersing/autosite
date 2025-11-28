@@ -236,7 +236,7 @@ The structured data will help with rich snippets in search results.
 
 ## 📝 Notes
 
-- Replace `https://skyautobody.com` with your actual domain when deploying
+- Domain is set to `https://skyautobody.co`
 - Update structured data coordinates if needed
 - Consider adding a contact form for lead generation
 - Monitor and respond to online reviews regularly

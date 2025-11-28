@@ -21,6 +21,7 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap",
   },
+  { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -28,7 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     "@context": "https://schema.org",
     "@type": "AutoBodyShop",
     name: "Sky Auto Body & Collision Repair",
-    image: "https://skyautobody.com/images/sky-logo-cropped.webp",
+    image: "https://skyautobody.co/images/sky-logo-cropped.webp",
     address: {
       "@type": "PostalAddress",
       streetAddress: "1385 Sage Rd",

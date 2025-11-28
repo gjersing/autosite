@@ -1,21 +1,29 @@
 import { Article } from "../components/Article";
+import { Link } from "react-router";
 
 export function meta() {
+  const title =
+    "Understanding Auto Body Repair Costs: A Complete Guide - Sky Auto Body";
+  const description =
+    "Complete guide to auto body repair costs in Medford, Oregon. Learn what factors affect pricing, insurance coverage, deductibles, and how to get accurate estimates. Free estimates available.";
+  const url = "https://skyautobody.co/repair-costs";
+
   return [
-    {
-      title:
-        "Understanding Auto Body Repair Costs: A Complete Guide - Sky Auto Body",
-    },
-    {
-      name: "description",
-      content:
-        "Learn about auto body repair costs, what factors affect pricing, insurance coverage, and how to get accurate estimates. Complete guide to understanding collision repair pricing in Medford, Oregon.",
-    },
+    { title },
+    { name: "description", content: description },
     {
       name: "keywords",
       content:
-        "auto body repair cost, collision repair price, car repair cost, auto body shop pricing, repair estimate cost, body shop rates Medford, insurance deductible",
+        "auto body repair cost, collision repair price, car repair cost, auto body shop pricing, repair estimate cost, body shop rates Medford, insurance deductible, how much does body work cost",
     },
+    { rel: "canonical", href: url },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:type", content: "article" },
+    { property: "og:url", content: url },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
   ];
 }
 
@@ -128,7 +136,15 @@ export default function RepairCosts() {
         additional fees. At Sky Auto Body, we provide free, comprehensive
         estimates with no appointment necessary. Our experienced estimators will
         inspect your vehicle, document all damage, and provide you with a clear,
-        detailed breakdown of what needs to be done and what it will cost.
+        detailed breakdown of what needs to be done and what it will cost. Learn
+        more about{" "}
+        <Link
+          to="/estimates"
+          style={{ color: "#fff", textDecoration: "underline" }}
+        >
+          our free estimate process
+        </Link>{" "}
+        and how we work with insurance companies.
       </p>
       <p>
         <strong>Hidden Costs to Consider</strong>
@@ -189,6 +205,27 @@ export default function RepairCosts() {
         safely and correctly. Don't hesitate to ask questions and get multiple
         estimates if you're unsure. A quality auto body shop will be happy to
         explain their pricing and help you understand what you're paying for.
+      </p>
+      <p>
+        <strong>Related Articles:</strong> Read our guide on{" "}
+        <Link
+          to="/choosing-body-shop"
+          style={{ color: "#fff", textDecoration: "underline" }}
+        >
+          how to choose the right auto body shop
+        </Link>
+        , learn about{" "}
+        <Link
+          to="/repair-process"
+          style={{ color: "#fff", textDecoration: "underline" }}
+        >
+          the collision repair process
+        </Link>
+        , and check out our{" "}
+        <Link to="/faq" style={{ color: "#fff", textDecoration: "underline" }}>
+          frequently asked questions
+        </Link>
+        .
       </p>
     </Article>
   );

@@ -1,15 +1,27 @@
 import { Article } from "../components/Article";
 
 export function meta() {
+  const title = "Refinishing Techniques - Sky Auto Body & Collision Repair";
+  const description =
+    "Professional auto body refinishing in Medford, Oregon. Three-stage paint system, advanced color matching, lifetime warranty. Expert paint matching and refinishing services.";
+  const url = "https://skyautobody.co/refinishing";
+
   return [
+    { title },
+    { name: "description", content: description },
     {
-      title: "Refinishing Techniques - Sky Auto Body & Collision Repair",
-    },
-    {
-      name: "description",
+      name: "keywords",
       content:
-        "Learn about Sky Auto Body's professional refinishing process, including three-stage paint systems, advanced color matching technology, and lifetime warranty on paint work.",
+        "auto body refinishing Medford, paint matching, three-stage paint system, car paint repair, refinishing techniques, lifetime paint warranty, color matching technology",
     },
+    { rel: "canonical", href: url },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:type", content: "article" },
+    { property: "og:url", content: url },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
   ];
 }
 

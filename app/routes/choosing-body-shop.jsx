@@ -1,21 +1,29 @@
 import { Article } from "../components/Article";
+import { Link } from "react-router";
 
 export function meta() {
+  const title =
+    "How to Choose the Right Auto Body Shop in Medford, Oregon - Sky Auto Body";
+  const description =
+    "Learn how to choose the best auto body shop in Medford, Oregon. Expert tips on certifications, warranties, insurance partnerships, and what to look for in quality collision repair services. I-CAR certified technicians, free estimates.";
+  const url = "https://skyautobody.co/choosing-body-shop";
+
   return [
-    {
-      title:
-        "How to Choose the Right Auto Body Shop in Medford, Oregon - Sky Auto Body",
-    },
-    {
-      name: "description",
-      content:
-        "Learn how to choose the best auto body shop in Medford, Oregon. Expert tips on certifications, warranties, insurance, and what to look for in quality collision repair services.",
-    },
+    { title },
+    { name: "description", content: description },
     {
       name: "keywords",
       content:
-        "choose auto body shop Medford, best body shop Oregon, auto body shop selection, collision repair Medford, certified auto body shop, I-CAR certified Medford",
+        "choose auto body shop Medford, best body shop Oregon, auto body shop selection, collision repair Medford, certified auto body shop, I-CAR certified Medford, how to choose body shop, auto body shop guide",
     },
+    { rel: "canonical", href: url },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:type", content: "article" },
+    { property: "og:url", content: url },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
   ];
 }
 
@@ -45,7 +53,14 @@ export default function ChoosingBodyShop() {
         technicians working on your vehicle are up-to-date with current repair
         methods and safety standards. At Sky Auto Body, all our technicians are
         I-CAR certified, giving you peace of mind that your vehicle is in
-        capable hands.
+        capable hands. Learn more about{" "}
+        <Link
+          to="/repair-process"
+          style={{ color: "#fff", textDecoration: "underline" }}
+        >
+          our collision repair process
+        </Link>{" "}
+        and how our certified technicians work.
       </p>
       <p>
         <strong>Look for Experience and Reputation</strong>
@@ -70,7 +85,15 @@ export default function ChoosingBodyShop() {
         Body, we work with all major insurance providers including State Farm,
         Geico, Progressive, Allstate, Farmers, USAA, Travelers, Nationwide,
         Liberty Mutual, and American Family. This means we can handle your claim
-        from start to finish, reducing your stress and paperwork.
+        from start to finish, reducing your stress and paperwork. Read more
+        about{" "}
+        <Link
+          to="/estimates"
+          style={{ color: "#fff", textDecoration: "underline" }}
+        >
+          our estimates and insurance billing process
+        </Link>{" "}
+        to understand how we work with insurance companies.
       </p>
       <p>
         <strong>Ask About Warranties</strong>
@@ -82,7 +105,14 @@ export default function ChoosingBodyShop() {
         warranty on all refinishing services, meaning if the paint we apply ever
         fades, peels, or fails due to workmanship or materials, we'll fix it at
         no charge. This level of warranty protection demonstrates our confidence
-        in the quality of our work.
+        in the quality of our work. Discover more about{" "}
+        <Link
+          to="/refinishing"
+          style={{ color: "#fff", textDecoration: "underline" }}
+        >
+          our refinishing techniques and warranty coverage
+        </Link>
+        .
       </p>
       <p>
         <strong>Consider the Shop's Equipment and Facilities</strong>
@@ -154,6 +184,27 @@ export default function ChoosingBodyShop() {
         exceptional service to every customer who walks through our doors. Stop
         by for a free estimate, and see why Medford residents trust us with
         their collision repair needs.
+      </p>
+      <p>
+        <strong>Related Articles:</strong> Learn more about{" "}
+        <Link
+          to="/repair-costs"
+          style={{ color: "#fff", textDecoration: "underline" }}
+        >
+          understanding auto body repair costs
+        </Link>
+        ,{" "}
+        <Link
+          to="/estimates"
+          style={{ color: "#fff", textDecoration: "underline" }}
+        >
+          getting free estimates
+        </Link>
+        , and{" "}
+        <Link to="/faq" style={{ color: "#fff", textDecoration: "underline" }}>
+          frequently asked questions
+        </Link>
+        .
       </p>
     </Article>
   );

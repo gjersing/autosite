@@ -1,16 +1,27 @@
 import { Article } from "../components/Article";
 
 export function meta() {
+  const title = "Estimates and Insurance Billing - Sky Auto Body & Collision Repair";
+  const description =
+    "Free auto body repair estimates in Medford, Oregon. No appointment needed. We work with all insurance companies including State Farm, Geico, Progressive, and more. Direct billing available.";
+  const url = "https://skyautobody.co/estimates";
+
   return [
+    { title },
+    { name: "description", content: description },
     {
-      title:
-        "Estimates and Insurance Billing - Sky Auto Body & Collision Repair",
-    },
-    {
-      name: "description",
+      name: "keywords",
       content:
-        "Learn about Sky Auto Body's free estimate process with no appointment necessary. We work with all insurance companies and offer direct billing, plus self-pay options.",
+        "free auto body estimate Medford, collision repair estimate, insurance direct billing, auto body shop estimate, free estimate no appointment, insurance claim Medford",
     },
+    { rel: "canonical", href: url },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:type", content: "article" },
+    { property: "og:url", content: url },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
   ];
 }
 

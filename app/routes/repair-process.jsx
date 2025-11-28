@@ -1,15 +1,28 @@
 import { Article } from "../components/Article";
 
 export function meta() {
+  const title =
+    "The Collision Repair Process - Sky Auto Body & Collision Repair";
+  const description =
+    "Complete guide to the collision repair process at Sky Auto Body in Medford, Oregon. Learn about estimates, disassembly, frame repair, paint matching, and quality control. I-CAR certified technicians.";
+  const url = "https://skyautobody.co/repair-process";
+
   return [
+    { title },
+    { name: "description", content: description },
     {
-      title: "The Collision Repair Process - Sky Auto Body & Collision Repair",
-    },
-    {
-      name: "description",
+      name: "keywords",
       content:
-        "Learn about our comprehensive collision repair process at Sky Auto Body. From initial estimate to final inspection, we walk you through each step of restoring your vehicle.",
+        "collision repair process, auto body repair steps, frame repair Medford, paint matching, collision repair Medford Oregon, I-CAR certified repair",
     },
+    { rel: "canonical", href: url },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:type", content: "article" },
+    { property: "og:url", content: url },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
   ];
 }
 

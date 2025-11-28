@@ -42,7 +42,7 @@ export function AboutUs() {
         </div>
       </div>
       <div className="services-cards-row">
-        <div className="service-card">
+        <Link to="/estimates" className="service-card">
           <img
             src="/images/estimating-process.webp"
             alt="Estimates and Insurance Billing"
@@ -55,8 +55,8 @@ export function AboutUs() {
             Get free estimates without an appointment. We work directly with
             your insurance company to handle all billing and paperwork.
           </p>
-        </div>
-        <div className="service-card">
+        </Link>
+        <Link to="/repair-process" className="service-card">
           <img
             src="/images/repair-process.jpg"
             alt="Collision Repair"
@@ -70,8 +70,8 @@ export function AboutUs() {
             I-CAR Certified technicians. We restore your vehicle to its
             pre-accident condition with precision and care.
           </p>
-        </div>
-        <div className="service-card">
+        </Link>
+        <Link to="/refinishing" className="service-card">
           <img
             src="/images/refinish-technique.avif"
             alt="Refinishing"
@@ -85,7 +85,7 @@ export function AboutUs() {
             technicians ensure a flawless finish that matches your vehicle's
             original color.
           </p>
-        </div>
+        </Link>
       </div>
     </div>
   );

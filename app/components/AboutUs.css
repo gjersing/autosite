@@ -206,31 +206,29 @@
     display: contents;
   }
 
-  .services-header {
-    order: 1;
-    width: 100%;
-    text-align: center;
-  }
-
   .carousel-container {
-    order: 2;
+    order: 1;
     width: 100%;
   }
 
   .carousel-wrapper {
     width: 600px;
     height: 540px;
+    margin: 0 auto;
+  }
+
+  .services-header {
+    order: 2;
+    width: 100%;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    text-align: center;
   }
 
   .about-us-text {
     order: 3;
     width: 100%;
-  }
-
-  .services-header {
-    font-size: 36px;
-    margin-bottom: 40px;
-    text-align: center;
   }
 
   .about-us-text {
@@ -260,7 +258,8 @@
 @media screen and (max-width: 400px) {
   .services-header {
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
   }
 
   .service-card h2 {

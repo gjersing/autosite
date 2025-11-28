@@ -1,13 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./Button.jsx";
-import { Link } from "react-router";
+import { Link, useNavigate, useLocation } from "react-router";
 import "./Navbar.css";
 
 export function Navbar() {
   const [click, setClick] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const handleHoursClick = (e) => {
+    e.preventDefault();
+    closeMobileMenu();
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Use requestAnimationFrame to wait for next render cycle
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          const element = document.getElementById("business-info");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 200);
+      });
+    } else {
+      // Already on home page, just scroll
+      const element = document.getElementById("business-info");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   const [button, setButton] = useState(true);
   const showButton = () => {
@@ -55,17 +80,17 @@ export function Navbar() {
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link
-              to="#business-info"
+            <a
+              href="/#business-info"
               className="nav-links"
-              onClick={closeMobileMenu}
+              onClick={handleHoursClick}
             >
               Hours
-            </Link>
+            </a>
           </li>
           <li className="nav-item">
             <Link
-              to="#about-us"
+              to="/about-us"
               className="nav-links"
               onClick={closeMobileMenu}
             >

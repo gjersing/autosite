@@ -73,6 +73,7 @@
 
 .hero-features li {
   margin: 12px 0;
+  font-weight: 400;
 }
 
 .hero-text {
@@ -141,7 +142,7 @@
 @media screen and (max-width: 960px) {
   .hero-container {
     gap: 15px;
-    margin-top: -80px;
+    margin-top: -50px;
   }
   .hero-header-container {
     text-align: center;

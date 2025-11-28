@@ -55,10 +55,15 @@ export function BusinessInfo() {
                     {businessStatus}
                   </h2>
                 </li>
-                <li>Mon-Fri: 800am-5:00pm</li>
+                <li>
+                  Mon-Fri: 800am-5:00pm<span style={{ color: "#fff" }}>*</span>
+                </li>
                 <li>Sat: Closed</li>
                 <li>Sun: Closed</li>
               </ol>
+              <p className="business-disclaimer">
+                *Holidays may affect these hours
+              </p>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-links">
-          <Link to="#about-us" className="footer-link">
+          <Link to="/about-us" className="footer-link">
             About Us
           </Link>
           <Link to="#" className="footer-link">

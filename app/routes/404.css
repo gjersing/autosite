@@ -1,0 +1,46 @@
+.not-found-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding: 12px;
+}
+
+.not-found-message {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+.not-found-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found-btns .btn {
+  width: 264px;
+}
+
+@media screen and (max-width: 960px) {
+  .not-found-message {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .not-found-message {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .not-found-message {
+    font-size: 18px;
+  }
+}
+

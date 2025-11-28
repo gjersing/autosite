@@ -6,12 +6,28 @@ import "../app.css";
 import "../components/AboutUs.css";
 
 export function meta() {
+  const title = "About Us - Sky Auto Body & Collision Repair | Medford, OR";
+  const description =
+    "Learn about Sky Auto Body & Collision Repair, a locally owned and operated auto body shop in Medford, Oregon. Our I-CAR Certified technicians provide honest, exceptional collision repair services with a commitment to quality and customer satisfaction. Free estimates, no appointment needed.";
+  const url = "https://skyautobody.co/";
+
   return [
-    { title: "About Us - Sky Auto Body & Collision Repair" },
+    { title },
+    { name: "description", content: description },
     {
-      name: "description",
-      content: "Learn about Sky Auto Body & Collision Repair",
+      name: "keywords",
+      content:
+        "about Sky Auto Body, locally owned auto body shop Medford, I-CAR certified technicians, collision repair Medford Oregon, auto body repair services",
     },
+    // Open Graph tags
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: url },
+    // Twitter Card tags
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
   ];
 }
 

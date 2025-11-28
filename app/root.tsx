@@ -24,11 +24,63 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AutoBodyShop",
+    name: "Sky Auto Body & Collision Repair",
+    image: "https://skyautobody.com/images/sky-logo-cropped.webp",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "1385 Sage Rd",
+      addressLocality: "Medford",
+      addressRegion: "OR",
+      postalCode: "97501",
+      addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 42.33829,
+      longitude: -122.89063,
+    },
+    url: "https://skyautobody.co",
+    telephone: "+15418414806",
+    priceRange: "$$",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "17:00",
+      },
+    ],
+    areaServed: {
+      "@type": "City",
+      name: "Medford",
+    },
+    serviceType: [
+      "Collision Repair",
+      "Auto Body Repair",
+      "Paint Matching",
+      "Refinishing",
+      "Car repair",
+      "Truck repair",
+      "Estimates",
+      "Car accident repair",
+      "Car accident estimates",
+    ],
+    description:
+      "Locally owned and operated auto body shop in Medford, Oregon. I-CAR Certified technicians providing expert collision repair, refinishing, and paint matching services. Free estimates, no appointment needed.",
+  };
+
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <script
           src="https://kit.fontawesome.com/f7ac33a8d0.js"
           crossOrigin="anonymous"

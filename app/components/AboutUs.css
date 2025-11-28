@@ -150,6 +150,13 @@
 
 .about-us-button {
   margin-top: 60px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-us-button .btn {
+  width: 170px;
 }
 
 .services-cards-row {

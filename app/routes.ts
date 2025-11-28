@@ -7,5 +7,6 @@ export default [
   route("repair-process", "routes/repair-process.jsx"),
   route("estimates", "routes/estimates.jsx"),
   route("refinishing", "routes/refinishing.jsx"),
+  route("faq", "routes/faq.jsx"),
   route("*", "routes/404.jsx"),
 ] satisfies RouteConfig;

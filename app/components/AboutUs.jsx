@@ -38,6 +38,15 @@ export function AboutUs() {
                 Learn More
               </Button>
             </Link>
+            <Link to="/faq">
+              <Button
+                className="btns"
+                buttonStyle="btn--primary"
+                buttonSize="btn--large"
+              >
+                FAQ
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

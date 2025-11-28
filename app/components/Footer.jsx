@@ -30,13 +30,15 @@ export function Footer() {
             </Link>
           </div>
           <div className="footer-logo">
-            <img
-              src="/images/sky-logo-cropped.webp"
-              alt="Sky Auto Body"
-              className="footer-logo-image"
-              loading="lazy"
-              decoding="async"
-            />
+            <Link to="/">
+              <img
+                src="/images/sky-logo-cropped.webp"
+                alt="Sky Auto Body"
+                className="footer-logo-image"
+                loading="lazy"
+                decoding="async"
+              />
+            </Link>
           </div>
           <div className="footer-section footer-hours">
             <p>Mon-Fri: 8:00am - 5:00pm</p>
@@ -47,8 +49,13 @@ export function Footer() {
           <Link to="/about-us" className="footer-link">
             About Us
           </Link>
+          <span className="footer-separator">|</span>
           <Link to="/articles" className="footer-link">
             Articles
+          </Link>
+          <span className="footer-separator">|</span>
+          <Link to="/faq" className="footer-link">
+            FAQ
           </Link>
         </div>
         <div className="footer-copyright">

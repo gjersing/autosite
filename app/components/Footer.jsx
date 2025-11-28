@@ -30,9 +30,9 @@ export function Footer() {
             </Link>
           </div>
           <div className="footer-logo">
-            <img 
-              src="/images/sky-logo-cropped.webp" 
-              alt="Sky Auto Body" 
+            <img
+              src="/images/sky-logo-cropped.webp"
+              alt="Sky Auto Body"
               className="footer-logo-image"
             />
           </div>
@@ -50,10 +50,13 @@ export function Footer() {
           </Link>
         </div>
         <div className="footer-copyright">
-          <p>&copy; {new Date().getFullYear()} Sky Auto Body & Collision Repair. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Sky Auto Body & Collision Repair.
+            All rights reserved.
+          </p>
+          <p>Developed locally in Medford, Oregon.</p>
         </div>
       </div>
     </footer>
   );
 }
-

@@ -25,6 +25,22 @@
   align-items: center;
 }
 
+.about-us-image-wrapper {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.about-us-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .carousel-wrapper {
   position: relative;
   width: 600px;
@@ -132,6 +148,10 @@
   margin-bottom: 0;
 }
 
+.about-us-button {
+  margin-top: 60px;
+}
+
 .services-cards-row {
   display: flex;
   flex-direction: row;
@@ -211,6 +231,12 @@
     width: 100%;
   }
 
+  .about-us-image-wrapper {
+    width: 100%;
+    height: 400px;
+    flex: none;
+  }
+
   .carousel-wrapper {
     width: 600px;
     height: 540px;
@@ -229,11 +255,17 @@
   .about-us-text {
     order: 3;
     width: 100%;
-  }
-
-  .about-us-text {
     text-align: center;
     font-size: 18px;
+  }
+
+  .about-us-button {
+    order: 4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .services-cards-row {
@@ -268,5 +300,13 @@
 
   .service-card p {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 601px) {
+  .about-us-image-wrapper {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
   }
 }

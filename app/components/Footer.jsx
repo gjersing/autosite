@@ -47,7 +47,7 @@ export function Footer() {
           <Link to="/about-us" className="footer-link">
             About Us
           </Link>
-          <Link to="#" className="footer-link">
+          <Link to="/articles" className="footer-link">
             Articles
           </Link>
         </div>

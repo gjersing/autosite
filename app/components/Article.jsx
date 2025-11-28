@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "./Navbar";
 import { CallToAction } from "./CallToAction";
 import { Footer } from "./Footer";
+import { Link } from "react-router";
 import "../app.css";
 import "./Article.css";
 
@@ -18,6 +19,9 @@ export function Article({ header, image = "/images/cars.jpg", children }) {
       <Navbar />
       <div className="article-container">
         <div className="article-content">
+          <Link to="/articles" className="article-back-link">
+            ← Back to Articles
+          </Link>
           <h1 className="article-header">{header}</h1>
           <div className="article-image-container">
             <div className="article-image-wrapper">
@@ -30,9 +34,7 @@ export function Article({ header, image = "/images/cars.jpg", children }) {
               />
             </div>
           </div>
-          <div className="article-body">
-            {children}
-          </div>
+          <div className="article-body">{children}</div>
         </div>
       </div>
       <section id="call-to-action">
@@ -42,4 +44,3 @@ export function Article({ header, image = "/images/cars.jpg", children }) {
     </main>
   );
 }
-

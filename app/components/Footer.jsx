@@ -48,7 +48,7 @@ export function Footer() {
             About Us
           </Link>
           <Link to="#" className="footer-link">
-            Blogs
+            Articles
           </Link>
         </div>
         <div className="footer-copyright">

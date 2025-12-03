@@ -88,13 +88,13 @@ export function Hero() {
           <li>Certified Technicians & Quality Repairs</li>
         </ul>
         <div className="hero-btns">
-          <Link to="tel:5418414806">
+          <Link to="tel:5415003811">
             <Button
               className="btns"
               buttonStyle="btn--outline"
               buttonSize="btn--large"
             >
-              <i className="fa-solid fa-phone"></i> (541) 841-4806
+              <i className="fa-solid fa-phone"></i> (541) 500-3811
             </Button>
           </Link>
           <Link

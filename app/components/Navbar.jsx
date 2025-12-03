@@ -74,7 +74,7 @@ export function Navbar() {
           >
             <i className="fa-solid fa-location-dot"></i>
           </Link>
-          <Link to="tel:5418414806" className="mobile-icon-button">
+          <Link to="tel:5415003811" className="mobile-icon-button">
             <i className="fa-solid fa-phone"></i>
           </Link>
         </div>
@@ -98,11 +98,7 @@ export function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link
-              to="/faq"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
+            <Link to="/faq" className="nav-links" onClick={closeMobileMenu}>
               FAQ
             </Link>
           </li>
@@ -120,18 +116,18 @@ export function Navbar() {
           {!button && (
             <li className="nav-item nav-contact">
               <Link
-                to="tel:5418414806"
+                to="tel:5415003811"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                <i className="fa-solid fa-phone"></i> (541) 841-4806
+                <i className="fa-solid fa-phone"></i> (541) 500-3811
               </Link>
             </li>
           )}
         </ul>
         {button && (
           <Button className="large-contact">
-            <i className="fa-solid fa-phone"></i> (541) 841-4806
+            <i className="fa-solid fa-phone"></i> (541) 500-3811
           </Button>
         )}
       </div>

@@ -44,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       longitude: -122.89063,
     },
     url: "https://skyautobody.co",
-    telephone: "+15418414806",
+    telephone: "+15415003811",
     priceRange: "$$",
     openingHoursSpecification: [
       {

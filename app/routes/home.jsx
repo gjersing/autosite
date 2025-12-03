@@ -3,7 +3,7 @@ import { Welcome } from "../welcome/welcome";
 export function meta() {
   const title = "Sky Auto Body";
   const description =
-    "Sky Auto Body & Collision Repair in Medford, Oregon. I-CAR Certified technicians providing expert collision repair, refinishing, and paint matching. Free estimates, no appointment needed. We work with all insurance companies. Call (541) 841-4806.";
+    "Sky Auto Body & Collision Repair in Medford, Oregon. I-CAR Certified technicians providing expert collision repair, refinishing, and paint matching. Free estimates, no appointment needed. We work with all insurance companies. Call (541) 500-3811.";
   const url = "https://skyautobody.co";
 
   return [

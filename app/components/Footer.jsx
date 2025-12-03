@@ -25,8 +25,8 @@ export function Footer() {
             >
               Medford, OR 97501
             </Link>
-            <Link to="tel:5418414806" className="footer-link">
-              (541) 841-4806
+            <Link to="tel:5415003811" className="footer-link">
+              (541) 500-3811
             </Link>
           </div>
           <div className="footer-logo">

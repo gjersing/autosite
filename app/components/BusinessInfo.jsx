@@ -42,8 +42,8 @@ export function BusinessInfo() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="tel:5418414806" className="business-link">
-                    (541) 841-4806
+                  <Link to="tel:5415003811" className="business-link">
+                    (541) 500-3811
                   </Link>
                 </li>
               </ul>

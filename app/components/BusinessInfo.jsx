@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import { getMapsUrl } from "../utils/maps";
 import "../app.css";
 import "./BusinessInfo.css";
 
@@ -10,8 +11,7 @@ export function BusinessInfo() {
   const openDays = [1, 2, 3, 4, 5]; // Monday-Friday
   const isOpen = openDays.includes(day) && hours >= 8 && hours <= 17;
   const businessStatus = isOpen ? "Open" : "Currently Closed";
-  const googleMapsLink =
-    "https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063";
+  const mapsLink = getMapsUrl();
 
   return (
     <div className="business-info-container">
@@ -23,7 +23,7 @@ export function BusinessInfo() {
               <ul>
                 <li>
                   <Link
-                    to={googleMapsLink}
+                    to={mapsLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="business-link"
@@ -33,7 +33,7 @@ export function BusinessInfo() {
                 </li>
                 <li>
                   <Link
-                    to={googleMapsLink}
+                    to={mapsLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="business-link"

@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router";
+import { getMapsUrl } from "../utils/maps";
 import "../app.css";
 import "./Footer.css";
 
 export function Footer() {
+  const mapsLink = getMapsUrl();
+
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-top-row">
           <div className="footer-section footer-location">
             <Link
-              to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063"
+              to={mapsLink}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-link"
@@ -18,7 +21,7 @@ export function Footer() {
               1385 Sage Rd
             </Link>
             <Link
-              to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063"
+              to={mapsLink}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-link"

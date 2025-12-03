@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./Button.jsx";
 import { Link, useNavigate, useLocation } from "react-router";
+import { getMapsUrl } from "../utils/maps";
 import "./Navbar.css";
 
 export function Navbar() {
@@ -67,7 +68,7 @@ export function Navbar() {
         </div>
         <div className="mobile-action-buttons">
           <Link
-            to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063"
+            to={getMapsUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="mobile-icon-button"
@@ -104,7 +105,7 @@ export function Navbar() {
           </li>
           <li className="nav-item nav-contact">
             <Link
-              to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063"
+              to={getMapsUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="nav-links"

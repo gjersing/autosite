@@ -3,6 +3,7 @@ import "../app.css";
 import "./Hero.css";
 import { Button } from "./Button";
 import { Link } from "react-router";
+import { getMapsUrl } from "../utils/maps";
 
 export function Hero() {
   const [hideVideo, setHideVideo] = useState(false);
@@ -97,11 +98,7 @@ export function Hero() {
               <i className="fa-solid fa-phone"></i> (541) 500-3811
             </Button>
           </Link>
-          <Link
-            to="https://www.google.com/maps?ll=42.33829,-122.89063&z=11&t=m&hl=en-US&gl=US&mapclient=embed&daddr=Sky%20Auto%20Body%20OR@42.33829,-122.89063"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to={getMapsUrl()} target="_blank" rel="noopener noreferrer">
             <Button
               className="btns"
               buttonStyle="btn--primary"
